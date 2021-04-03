@@ -6,7 +6,7 @@
 5. Otros
 */
 
-:root{
+:root {
     /** Colores */
     --bitcoin-orange: #F7931A;
     --soft-orange: #FFE9D5;
@@ -19,20 +19,20 @@
     --just-white: #fff;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
 }
 
 /** Maquetado del header */
 
-header{
+header {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -44,14 +44,14 @@ header{
     background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
 }
 
-header img{
+header img {
     width: 150px;
     height: 24px;
     margin-top: 60px;
     align-self: center; /** Manera de centrar a un elemento con un contenedor con display: flex; */
 }
 
-.header--title-container{
+.header--title-container {
     width: 90%;
     min-width: 288px;
     max-width: 900px;
@@ -61,14 +61,14 @@ header img{
     align-self: center;
 }
 
-.header--title-container h1{
+.header--title-container h1 {
     font-size: 2.4rem;
     font-weight: bold;
     line-height: 2.6rem; /** Dimension entre lineas de un parrafo */
     color: var(--just-white);
 }
 
-.header--title-container p{
+.header--title-container p {
     margin-top: 25px;
     font-size: 1.4rem;
     font-weight: 500;
@@ -76,7 +76,7 @@ header img{
     color: var(--soft-orange);
 }
 
-.header--title-container .header--button{
+.header--title-container .header--button {
     position: absolute;
     left: calc(50% - 114.5px); /** Ver casos en los que se utiliza el calc */
     top: calc(100% - 24px);
@@ -95,7 +95,7 @@ header img{
     color: var(--black);
 }
 
-.header--button span{
+.header--button span {
     display: inline-block;
     width: 13px;
     height: 8px;
@@ -105,13 +105,13 @@ header img{
 
 /* Estilos MAIN */
 
-main{
+main {
     width: 100%;
     height: auto;
     background-color: var(--off-white);
 }
 
-.main-exchange-container{
+.main-exchange-container {
     width: 100%;
     height: auto;
     padding-top: 80px;
@@ -119,9 +119,36 @@ main{
     text-align: center;
 }
 
-.main-exchange-container__title{
+.main-exchange-container__title {
     width: 90%;
     min-width: 288px;
     max-width: 900px;
     margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('./assets/imgs/bitcoin.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-exchange-container__title h2 {
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.main-exchange-container__title p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
 }
