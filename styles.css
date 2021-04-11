@@ -388,7 +388,8 @@ main {
     color: #808080;
 }
 
-/* Estilos de componente de TARJETA */
+/* Estilos de componente de TARJETA 
+?TIEMPO */
 
 .product-detail-card--time {
     width: 90%;
@@ -426,4 +427,82 @@ main {
     font-weight: 500;
     line-height: 1.8rem;
     color: #808080;
+}
+
+/* Estilos de tarjeta 
+? TRANSPARENCIA */
+
+.product-detail-card--transparency {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 16px 20px 22px 16px;
+    background-color: var(--black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--transparency .eye {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/eye.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos de tarjeta 
+? COMPARACIÓN */
+
+.product-detail-card--comparison {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 16px 20px 22px 16px;
+    background-color: var(--black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--comparison .dollar {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/dollar-sign.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Estilos de tarjeta 
+? CONFIABILIDAD */
+
+.product-detail-card--reliability {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 16px 20px 22px 16px;
+    background-color: var(--black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--reliability .check {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+    background-image: url('./assets/icons/check-circle.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
