@@ -53,7 +53,7 @@ header img {
 
 .header--title-container {
     width: 90%;
-    min-width: 288px;
+    min-width: 288px; /** Cuando llegue a esa medida va a dejar de ac */
     max-width: 900px;
     height: 218px;
     margin-top: 40px;
@@ -505,4 +505,25 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/* Estilos seccion comodin */
+
+.main-bitcoin-image-container {
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url('./assets/imgs/bitcoinbaby2x.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.bitcoin-image__title {
+    padding-top: 64px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: var(--just-white);
 }
