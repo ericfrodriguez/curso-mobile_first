@@ -1,1 +1,11 @@
+node_modules
 
+*.json
+
+sass
+
+*.scss
+
+/assets/css
+
+prepros.config

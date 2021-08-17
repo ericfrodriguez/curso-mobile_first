@@ -1,0 +1,840 @@
+@charset "UTF-8";
+/*
+1. Posicionamiento
+2. Modelo caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/** Maquetado del header */
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-width: 320px;
+  height: 334px;
+  text-align: center;
+  background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+
+header img {
+  width: 150px;
+  height: 24px;
+  margin-top: 60px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /** Manera de centrar a un elemento con un contenedor con display: flex; */
+}
+
+.header--title-container {
+  width: 90%;
+  min-width: 288px;
+  /** Cuando llegue a esa medida va a dejar de ac */
+  max-width: 900px;
+  height: 218px;
+  margin-top: 40px;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  /** Dimension entre lineas de un parrafo */
+  color: #fff;
+}
+
+.header--title-container p {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #FFE9D5;
+}
+
+.header--title-container .header--button {
+  position: absolute;
+  left: calc(50% - 114.5px);
+  /** Ver casos en los que se utiliza el calc */
+  top: calc(100% - 24px);
+  display: block;
+  padding: 15px;
+  width: 229px;
+  height: 48px;
+  background: #FAF8F7;
+  /** Sombra */
+  -webkit-box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+          box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #282623;
+}
+
+.header--button span {
+  display: inline-block;
+  width: 13px;
+  height: 8px;
+  margin-left: 10px;
+  background-image: url("../assets/icons/down-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Estilos MAIN */
+main {
+  width: 100%;
+  height: auto;
+  background-color: #FAF8F7;
+}
+
+.main-exchange-container {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.main-exchange-container__title {
+  width: 90%;
+  min-width: 288px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main-exchange-container .backgroundImg {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-image: url("../assets/imgs/bitcoin.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main-exchange-container__title h2 {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #282623;
+}
+
+.main-exchange-container__title p {
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  color: #757575;
+}
+
+/*todo Estilos de la tabla MONEDAS */
+.main-tables-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 900px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity;
+}
+
+.main-currency-table {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 20px 0 25vw;
+  scroll-snap-align: center;
+  font-family: "Inter", sans serif;
+}
+
+.main-currency-table .currency-table__title {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: #F7931A;
+}
+
+.currency-table__container {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.currency-table__container table {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table__container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: #BABABA;
+  background-color: #fff;
+}
+
+.currency-table__container .table--top-left {
+  border-radius: 15px 0 0 0;
+}
+
+.currency-table__container .table--top-right {
+  border-radius: 0 15px 0 0;
+}
+
+.currency-table__container .table--bottom-left {
+  border-radius: 0 0 0 15px;
+}
+
+.currency-table__container .table--bottom-right {
+  border-radius: 0 0 15px 0;
+}
+
+.currency-table__container .table--right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+
+.currency-table__container .down {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("../assets/icons/trending-down.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.currency-table__container .up {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background-image: url("../assets/icons/trending-up.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.currency-table__date {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: #FFE9D5;
+  border-radius: 8px;
+}
+
+.currency-table__date p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #201E1C;
+}
+
+/*? Estilos de la tabla COMISIONES */
+.main-currency-table--commissions {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 25vw 0 20px;
+  scroll-snap-align: center;
+  font-family: "Inter", sans serif;
+}
+
+.main-currency-table--commissions .currency-table__title--commissions {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: #1A9AF7;
+}
+
+.currency-table__container--commissions {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.currency-table__container--commissions table {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table__container--commissions td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: #BABABA;
+  background-color: #fff;
+}
+
+.currency-table__container--commissions .table--top-left {
+  border-radius: 15px 0 0 0;
+}
+
+.currency-table__container--commissions .table--top-right {
+  border-radius: 0 15px 0 0;
+}
+
+.currency-table__container--commissions .table--bottom-left {
+  border-radius: 0 0 0 15px;
+}
+
+.currency-table__container--commissions .table--bottom-right {
+  border-radius: 0 0 15px 0;
+}
+
+.currency-table__container--commissions .table--right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: #757575;
+}
+
+.currency-table__date--commissions {
+  width: 190px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 8px;
+  background-color: #E7F5FF;
+  border-radius: 8px;
+}
+
+.currency-table__date--commissions p {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #201E1C;
+}
+
+/* Estilos sección BENEFICIOS */
+.main-product-detail {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: #201E1C;
+}
+
+.product-detail__batata-logo {
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  background-image: url("../assets/imgs/Group 16.svg");
+  top: -12px;
+  left: calc(50% - 20px);
+}
+
+.product-detail__title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.product-detail__title h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #fff;
+}
+
+.product-detail__title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+/* Estilos de componente de TARJETA 
+?TIEMPO */
+.product-cards__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-width: 320px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.product__card {
+  margin-top: 20px;
+}
+
+.product-detail-card--time {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  padding: 16px 20px 22px 16px;
+  background-color: #282623;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--time .clock {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  background-image: url("../assets/icons/clock.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-detail-card__title {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: #fff;
+}
+
+.product-detail-card__description {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #808080;
+}
+
+/* Estilos de tarjeta 
+? TRANSPARENCIA */
+.product-detail-card--transparency {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  padding: 16px 20px 22px 16px;
+  background-color: #282623;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--transparency .eye {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  background-image: url("../assets/icons/eye.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Estilos de tarjeta 
+? COMPARACIÓN */
+.product-detail-card--comparison {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  padding: 16px 20px 22px 16px;
+  background-color: #282623;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--comparison .dollar {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  background-image: url("../assets/icons/dollar-sign.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Estilos de tarjeta 
+? CONFIABILIDAD */
+.product-detail-card--reliability {
+  width: 90%;
+  min-width: 288px;
+  max-width: 400px;
+  height: 150px;
+  padding: 16px 20px 22px 16px;
+  background-color: #282623;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card--reliability .check {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  background-image: url("../assets/icons/check-circle.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Estilos seccion comodin */
+.main-bitcoin-image-container {
+  width: 100%;
+  min-width: 320px;
+  height: 50vh;
+  background-image: url("../assets/imgs/bitcoinbaby2x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.bitcoin-image__title {
+  padding-top: 64px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: #fff;
+}
+
+/* Estilo seccion planes */
+.main-plans-container {
+  width: 100%;
+  min-width: 320px;
+  padding: 64px 0;
+  text-align: center;
+  background-color: #E5E5E5;
+}
+
+.plans__title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.plans__title h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: #201E1C;
+}
+.plans__title p {
+  margin: 0 auto;
+  padding-top: 24px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
+}
+
+.plans-container--slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 900px;
+  height: auto;
+  padding-bottom: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity;
+}
+
+.basic-plan {
+  position: relative;
+  scroll-snap-align: center;
+  width: 60%;
+  min-width: 230px;
+  max-width: 300px;
+  height: auto;
+  margin: 50px 20px 0px;
+  padding: 30px 16px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-left: 50vw;
+}
+
+.recommended-plan {
+  position: relative;
+  scroll-snap-align: center;
+  width: 60%;
+  min-width: 230px;
+  max-width: 300px;
+  height: auto;
+  margin: 50px 20px 0px;
+  padding: 30px 16px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.premium-plan {
+  position: relative;
+  scroll-snap-align: center;
+  width: 60%;
+  min-width: 230px;
+  max-width: 300px;
+  height: auto;
+  margin: 50px 20px 0px;
+  padding: 30px 16px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #201E1C;
+  margin-right: 50vw;
+}
+.premium-plan .plan-card__title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 18px;
+  color: #FAF8F7;
+}
+.premium-plan .plan-card__price {
+  position: relative;
+  display: inline-block;
+  padding-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.4rem;
+  font-size: 5.2rem;
+  color: #FAF8F7;
+}
+.premium-plan .plan-card__price span {
+  position: absolute;
+  top: 17px;
+  left: -13px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: start;
+  color: #FAF8F7;
+}
+.premium-plan .plan-card__saving {
+  padding-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #BABABA;
+}
+.premium-plan .plan-card__button {
+  background-color: #201E1C;
+  color: #FAF8F7;
+}
+
+.basic {
+  position: absolute;
+  padding: 10px;
+  left: calc(50% - 30px);
+  top: -17px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  color: #fff;
+  border-radius: 8px;
+  background-color: #1A9AF7;
+}
+
+.recommended {
+  position: absolute;
+  padding: 10px;
+  left: calc(50% - 52px);
+  top: -17px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  color: #fff;
+  border-radius: 8px;
+  background-color: #F7931A;
+}
+
+.premium {
+  position: absolute;
+  padding: 10px;
+  left: calc(50% - 36px);
+  top: -17px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  color: #282623;
+  border-radius: 8px;
+  background-color: #BABABA;
+}
+
+.plan-card__title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 18px;
+  color: black;
+}
+
+.plan-card__price {
+  position: relative;
+  display: inline-block;
+  padding-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.4rem;
+  font-size: 5.2rem;
+}
+.plan-card__price span {
+  position: absolute;
+  top: 17px;
+  left: -13px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: start;
+  color: #201E1C;
+}
+
+.plan-card__saving {
+  padding-top: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #757575;
+}
+
+.plan-card__button {
+  margin-top: 16px;
+  padding: 15px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border: 2px solid #F7931A;
+  border-radius: 5px;
+}
+.plan-card__button .arrow-icon {
+  display: inline-block;
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/icons/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: #F7931A;
+}
+footer section {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer--left li {
+  list-style: none;
+  margin: 10px 0;
+}
+.footer--left a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+.footer--right img {
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer--right p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #FFE9D5;
+}
